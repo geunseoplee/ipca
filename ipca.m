@@ -33,6 +33,6 @@ function [U, D, V] = ipca(B, b, newb, U, D, V)
       if nargout > 2
           V1 = [V, Z, zeros(size(V,1), size(T1,1));zeros(size(T1,1), ...
           size(V,2)), zeros(size(T1,1), size(Z,2)), eye(size(T1,1), size(T1,1))];
-          V = V1 * Vn(:,1:tr);
+          V = V1 * Vn(:,1:k);
       end
 end
