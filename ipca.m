@@ -23,7 +23,7 @@ function [U, D, V] = ipca(B, b, newb, U, D, V)
     end
      T1 = [eye(p,p), ones(p,1)];
     
-     Lambda = [D, UtS * W', UtS * T1'; zeros(size(U1,2) - tr, tr), R * W', R * T1'];
+     Lambda = [D, UtS * W', UtS * T1'; zeros(size(U1,2) - k, k), R * W', R * T1'];
      
      [Un, Dn, Vn] = svd(Lambda,'econ');
      
